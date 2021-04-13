@@ -1,1 +1,3 @@
 rootProject.name = 'g-pet-clinic'
+include 'common'
+
