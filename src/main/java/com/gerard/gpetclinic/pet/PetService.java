@@ -1,7 +1,6 @@
-package com.gerard.gpetclinic.person;
+package com.gerard.gpetclinic.pet;
 
 import com.gerard.gpetclinic.common.CrudService;
-import com.gerard.gpetclinic.pet.Pet;
 
 public interface PetService extends CrudService<Pet, Long> {
 

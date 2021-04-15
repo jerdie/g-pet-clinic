@@ -1,4 +1,4 @@
-package com.gerard.gpetclinic.person;
+package com.gerard.gpetclinic.person.owner;
 
 import com.gerard.gpetclinic.common.CrudService;
 

@@ -1,6 +1,6 @@
 package com.gerard.gpetclinic.pet;
 
-import com.gerard.gpetclinic.person.Owner;
+import com.gerard.gpetclinic.person.owner.Owner;
 
 import java.time.LocalDate;
 
