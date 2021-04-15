@@ -1,15 +1,10 @@
 package com.gerard.gpetclinic.person;
 
-import java.util.Set;
+import com.gerard.gpetclinic.common.CrudService;
 
-public interface OwnerService {
+
+public interface OwnerService extends CrudService<Owner, Long> {
 
     Owner findByLastName(String lastName);
-
-    Owner findById(Long id);
-
-    Owner save(Owner id);
-
-    Set<Owner> findAll(Long id);
 
 }

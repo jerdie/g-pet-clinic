@@ -1,13 +1,7 @@
 package com.gerard.gpetclinic.person;
 
-import java.util.Set;
+import com.gerard.gpetclinic.common.CrudService;
 
-public interface VetService {
-
-    Vet findById(Long id);
-
-    Vet save(Vet vet);
-
-    Set<Vet> findAll();
+public interface VetService extends CrudService<Vet, Long> {
 
 }
