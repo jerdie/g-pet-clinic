@@ -1,0 +1,9 @@
+spring:
+  banner:
+    image:
+      location: G.png
+
+g:
+  petclinic:
+    value1: test1
+    value2: test2
