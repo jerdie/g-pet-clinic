@@ -1,6 +1,8 @@
 package com.gerard.gpetclinic.pet;
 
-public class PetType {
+import com.gerard.gpetclinic.common.BaseEntity;
+
+public class PetType extends BaseEntity {
 
     private String name;
 
