@@ -1,6 +1,7 @@
 package com.gerard.gpetclinic.person.vet;
 
 import com.gerard.gpetclinic.person.Person;
+import com.gerard.gpetclinic.person.vet.specialty.Specialty;
 
 import java.util.Set;
 

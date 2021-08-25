@@ -1,4 +1,4 @@
-package com.gerard.gpetclinic.person.vet;
+package com.gerard.gpetclinic.person.vet.specialty;
 
 import com.gerard.gpetclinic.common.BaseEntity;
 
