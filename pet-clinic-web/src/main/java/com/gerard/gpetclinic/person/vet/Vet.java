@@ -3,11 +3,12 @@ package com.gerard.gpetclinic.person.vet;
 import com.gerard.gpetclinic.person.Person;
 import com.gerard.gpetclinic.person.vet.specialty.Specialty;
 
+import java.util.HashSet;
 import java.util.Set;
 
 public class Vet extends Person {
 
-    private Set<Specialty> specialties;
+    private Set<Specialty> specialties = new HashSet<>();
 
     public Set<Specialty> getSpecialties() {
         return specialties;
