@@ -9,6 +9,8 @@ import com.gerard.gpetclinic.person.vet.specialty.Specialty;
 import com.gerard.gpetclinic.pet.Pet;
 import com.gerard.gpetclinic.pet.PetType;
 import com.gerard.gpetclinic.pet.PetTypeService;
+import com.gerard.gpetclinic.visit.Visit;
+import com.gerard.gpetclinic.visit.VisitService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -21,12 +23,14 @@ public class DataLoader implements CommandLineRunner {
     private final VetService vetService;
     private final PetTypeService petTypeService;
     private final SpecialtyService spectialtyService;
+    private final VisitService visitService;
 
-    public DataLoader(OwnerService ownerService, VetService vetService, PetTypeService petTypeService, SpecialtyService spectialtyService) {
+    public DataLoader(OwnerService ownerService, VetService vetService, PetTypeService petTypeService, SpecialtyService spectialtyService, VisitService visitService) {
         this.ownerService = ownerService;
         this.vetService = vetService;
         this.petTypeService = petTypeService;
         this.spectialtyService = spectialtyService;
+        this.visitService = visitService;
     }
 
     @Override
@@ -86,6 +90,12 @@ public class DataLoader implements CommandLineRunner {
         fionasCat.setPetType(savedCatType);
         owner2.getPets().add(fionasCat);
         ownerService.save(owner2);
+
+        Visit catVisit = new Visit();
+        catVisit.setPet(fionasCat);
+        catVisit.setDate(LocalDate.now());
+        catVisit.setDescription("Sneezy kitty");
+        visitService.save(catVisit);
 
         System.out.println("Loaded Owners....");
 
