@@ -3,13 +3,20 @@ package com.gerard.gpetclinic.pet;
 import com.gerard.gpetclinic.common.BaseEntity;
 import com.gerard.gpetclinic.person.owner.Owner;
 
+import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
 import java.time.LocalDate;
 
+@Entity
 public class Pet extends BaseEntity {
 
     private String name;
     private LocalDate birthDate;
+
+    @ManyToOne
     private PetType petType;
+
+    @ManyToOne
     private Owner owner;
 
     public LocalDate getBirthDate() {
