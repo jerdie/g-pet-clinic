@@ -2,10 +2,14 @@ package com.gerard.gpetclinic.pet;
 
 import com.gerard.gpetclinic.common.BaseEntity;
 import com.gerard.gpetclinic.person.owner.Owner;
+import com.gerard.gpetclinic.visit.Visit;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import java.time.LocalDate;
+import java.util.Set;
 
 @Entity
 public class Pet extends BaseEntity {
@@ -18,6 +22,9 @@ public class Pet extends BaseEntity {
 
     @ManyToOne
     private Owner owner;
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "pet")
+    private Set<Visit> visits;
 
     public LocalDate getBirthDate() {
         return birthDate;
