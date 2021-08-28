@@ -3,11 +3,13 @@ package com.gerard.gpetclinic.person.vet;
 import com.gerard.gpetclinic.common.AbstractMapService;
 import com.gerard.gpetclinic.person.vet.specialty.Specialty;
 import com.gerard.gpetclinic.person.vet.specialty.SpecialtyService;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
 @Service
+@Profile({"default", "map"})
 public class VetMapService extends AbstractMapService<Vet,Long> implements VetService {
 
     private final SpecialtyService specialtyService;

@@ -4,6 +4,8 @@ spring:
       location: G.png
   messages:
     basename: messages/messages
+  profiles:
+    active: jpa
 
 g:
   petclinic:
