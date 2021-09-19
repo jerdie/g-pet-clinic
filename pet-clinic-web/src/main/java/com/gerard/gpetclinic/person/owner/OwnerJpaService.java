@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 @Profile("jpa")
-public class OwnerJpaService extends AbstractJpaService<Owner, OwnerRepository> implements OwnerService {
+class OwnerJpaService extends AbstractJpaService<Owner, OwnerRepository> implements OwnerService {
 
     public OwnerJpaService(OwnerRepository ownerRepository) {
         super(ownerRepository);
@@ -17,4 +17,4 @@ public class OwnerJpaService extends AbstractJpaService<Owner, OwnerRepository> 
         return repository.findByLastName(lastName);
     }
 
-}
+} 
