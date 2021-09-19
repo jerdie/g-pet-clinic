@@ -6,10 +6,7 @@ import com.gerard.gpetclinic.visit.Visit;
 import lombok.*;
 import org.springframework.format.annotation.DateTimeFormat;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Entity;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.Set;
 
@@ -36,16 +33,14 @@ public class Pet extends BaseEntity {
     private LocalDate birthDate;
 
     @ManyToOne
+    @JoinColumn(name = "type_id")
     private PetType petType;
 
     @ManyToOne
+    @JoinColumn(name = "owner_id")
     private Owner owner;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "pet")
     private Set<Visit> visits;
-
-    public LocalDate getBirthDate() {
-        return birthDate;
-    }
 
 }
